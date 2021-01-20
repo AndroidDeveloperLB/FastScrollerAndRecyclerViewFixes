@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fastScrollThickness">8dp</dimen>
+    <dimen name="fastScrollMargin">0dp</dimen>
+    <dimen name="fastScrollMinimumRange">50dp</dimen>
+    <dimen name="fastScrollMinThumbSize">50dp</dimen>
+</resources>

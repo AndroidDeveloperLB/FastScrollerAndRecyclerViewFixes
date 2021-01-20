@@ -1,0 +1,3 @@
+rootProject.name = "FastScrollerEx"
+include ':app'
+include ':library'
