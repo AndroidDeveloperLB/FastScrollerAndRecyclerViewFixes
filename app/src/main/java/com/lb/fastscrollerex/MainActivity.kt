@@ -68,11 +68,9 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var url: String? = null
         when (item.itemId) {
-            R.id.menuItem_all_my_apps -> url =
-                    "https://play.google.com/store/apps/developer?id=AndroidDeveloperLB"
+            R.id.menuItem_all_my_apps -> url = "https://play.google.com/store/apps/developer?id=AndroidDeveloperLB"
             R.id.menuItem_all_my_repositories -> url = "https://github.com/AndroidDeveloperLB"
-            R.id.menuItem_current_repository_website -> url =
-                    "https://github.com/AndroidDeveloperLB/FastScrollerEx"
+            R.id.menuItem_current_repository_website -> url = "https://github.com/AndroidDeveloperLB/FastScrollerEx"
         }
         if (url == null)
             return true
