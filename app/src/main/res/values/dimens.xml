@@ -6,6 +6,6 @@
     <dimen name="fastScrollMinThumbSize">50dp</dimen>
 
     <dimen name="bottom_list_padding">128dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin">32dp</dimen>
 
 </resources>

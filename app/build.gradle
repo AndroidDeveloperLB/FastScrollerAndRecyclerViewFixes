@@ -29,6 +29,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,5 +43,9 @@ dependencies {
     implementation project(path: ':library')
 
 //   https://github.com/AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes
-//    implementation 'com.github.AndroidDeveloperLB:FastScrollerAndRecyclerViewFixes:3'
+//    implementation 'com.github.AndroidDeveloperLB:FastScrollerAndRecyclerViewFixes:5'
+
+    //    https://github.com/chrisbanes/insetter
+    implementation 'dev.chrisbanes:insetter:0.3.1'
+    implementation 'dev.chrisbanes:insetter-ktx:0.3.1'
 }
