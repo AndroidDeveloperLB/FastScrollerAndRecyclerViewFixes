@@ -22,7 +22,7 @@
  * behind a navigation bar, but the scroller should not go under the navigation bar).
  */
 
-package com.lb.fast_scroller_library;
+package com.lb.fast_scroller_and_recycler_view_fixes_library;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -51,7 +51,7 @@ import java.lang.annotation.RetentionPolicy;
  * based on: https://stackoverflow.com/q/47846873/878126 https://stackoverflow.com/a/58652264/878126
  */
 @SuppressWarnings("unused")
-public class FastScroller2 extends RecyclerView.ItemDecoration implements RecyclerView.OnItemTouchListener {
+public class FastScrollerEx extends RecyclerView.ItemDecoration implements RecyclerView.OnItemTouchListener {
     @IntDef({STATE_HIDDEN, STATE_VISIBLE, STATE_DRAGGING})
     @Retention(RetentionPolicy.SOURCE)
     private @interface State {
@@ -167,10 +167,10 @@ public class FastScroller2 extends RecyclerView.ItemDecoration implements Recycl
         }
     };
 
-    public FastScroller2(RecyclerView recyclerView, StateListDrawable verticalThumbDrawable,
-                         Drawable verticalTrackDrawable, StateListDrawable horizontalThumbDrawable,
-                         Drawable horizontalTrackDrawable, int defaultWidth, int scrollbarMinimumRange,
-                         int margin, boolean considerPadding, int minThumbSize) {
+    public FastScrollerEx(RecyclerView recyclerView, StateListDrawable verticalThumbDrawable,
+                          Drawable verticalTrackDrawable, StateListDrawable horizontalThumbDrawable,
+                          Drawable horizontalTrackDrawable, int defaultWidth, int scrollbarMinimumRange,
+                          int margin, boolean considerPadding, int minThumbSize) {
         mVerticalThumbDrawable = verticalThumbDrawable;
         mVerticalTrackDrawable = verticalTrackDrawable;
         mHorizontalThumbDrawable = horizontalThumbDrawable;

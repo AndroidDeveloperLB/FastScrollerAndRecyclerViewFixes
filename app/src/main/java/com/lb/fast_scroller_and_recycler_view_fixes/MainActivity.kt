@@ -1,4 +1,4 @@
-package com.lb.fastscrollerex
+package com.lb.fast_scroller_and_recycler_view_fixes
 
 import android.content.Intent
 import android.graphics.drawable.StateListDrawable
@@ -14,9 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.lb.fast_scroller_library.BottomOffsetDecoration
-import com.lb.fast_scroller_library.FastScroller2
-import com.lb.fast_scroller_library.GridLayoutManagerEx
+import com.lb.fast_scroller_and_recycler_view_fixes_library.BottomOffsetDecoration
+import com.lb.fast_scroller_and_recycler_view_fixes_library.FastScrollerEx
+import com.lb.fast_scroller_and_recycler_view_fixes_library.GridLayoutManagerEx
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,8 +54,10 @@ class MainActivity : AppCompatActivity() {
         val minRange = resources.getDimensionPixelSize(R.dimen.fastScrollMinimumRange)
         val margin = resources.getDimensionPixelSize(R.dimen.fastScrollMargin)
         val minThumbSize = resources.getDimensionPixelSize(R.dimen.fastScrollMinThumbSize)
-        FastScroller2(recyclerView, thumbDrawable, lineDrawable,
-                thumbDrawable, lineDrawable, thickness, minRange, margin, false, minThumbSize)
+        FastScrollerEx(
+            recyclerView, thumbDrawable, lineDrawable,
+            thumbDrawable, lineDrawable, thickness, minRange, margin, false, minThumbSize
+        )
         recyclerView.addItemDecoration(BottomOffsetDecoration(resources.getDimensionPixelSize(R.dimen.bottom_list_padding),
                 BottomOffsetDecoration.LayoutManagerType.GRID_LAYOUT_MANAGER))
     }
@@ -70,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.menuItem_all_my_apps -> url = "https://play.google.com/store/apps/developer?id=AndroidDeveloperLB"
             R.id.menuItem_all_my_repositories -> url = "https://github.com/AndroidDeveloperLB"
-            R.id.menuItem_current_repository_website -> url = "https://github.com/AndroidDeveloperLB/FastScrollerEx"
+            R.id.menuItem_current_repository_website -> url = "https://github.com/AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes"
         }
         if (url == null)
             return true

@@ -1,4 +1,4 @@
-package com.lb.fast_scroller_library
+package com.lb.fast_scroller_and_recycler_view_fixes_library
 
 import android.graphics.Rect
 import android.view.View

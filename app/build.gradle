@@ -7,7 +7,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.lb.fastscrollerex"
+        applicationId "com.lb.fast_scroller_and_recycler_view_fixes"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
