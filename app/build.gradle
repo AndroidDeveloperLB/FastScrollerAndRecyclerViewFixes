@@ -38,4 +38,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':library')
+
+//   https://github.com/AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes
+//    implementation 'com.github.AndroidDeveloperLB:FastScrollerAndRecyclerViewFixes:3'
 }
