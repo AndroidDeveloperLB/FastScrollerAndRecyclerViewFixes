@@ -4,4 +4,8 @@
     <dimen name="fastScrollMargin">0dp</dimen>
     <dimen name="fastScrollMinimumRange">50dp</dimen>
     <dimen name="fastScrollMinThumbSize">50dp</dimen>
+
+    <dimen name="bottom_list_padding">128dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
 </resources>
