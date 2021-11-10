@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lb.fast_scroller_and_recycler_view_fixes.databinding.ActivityMainBinding
+import com.lb.fast_scroller_and_recycler_view_fixes.databinding.SimpleListItem1Binding
 import com.lb.fast_scroller_and_recycler_view_fixes_library.BottomOffsetDecoration
 import com.lb.fast_scroller_and_recycler_view_fixes_library.FastScrollerEx
 import com.lb.fast_scroller_and_recycler_view_fixes_library.GridLayoutManagerEx
@@ -42,15 +43,15 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-                val view = LayoutInflater.from(this@MainActivity).inflate(R.layout.simple_list_item_1, parent, false)
-                view.findViewById<TextView>(android.R.id.text1).setTextSize(TypedValue.COMPLEX_UNIT_DIP, 40f)
-                return object : RecyclerView.ViewHolder(view) {
+                val itemBinding=SimpleListItem1Binding.inflate( LayoutInflater.from(this@MainActivity),parent,false)
+                return object : RecyclerView.ViewHolder(itemBinding.itemTextView) {
                 }
             }
 
             override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-                holder.itemView.findViewById<TextView>(android.R.id.text1).text = position.toString()
-                holder.itemView.setBackgroundColor(if (position % 2 == 0) 0xffff0000.toInt() else 0xff00ff00.toInt())
+                val itemBinding=SimpleListItem1Binding.bind(holder.itemView)
+                itemBinding.itemTextView.text = position.toString()
+                itemBinding.itemTextView.setBackgroundColor(if (position % 2 == 0) 0xffff0000.toInt() else 0xff00ff00.toInt())
             }
 
             //Have plenty of items, to make sure it fixes issues that the thumb is too small
