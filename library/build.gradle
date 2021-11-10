@@ -26,6 +26,15 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                }
+            }
+        }
+    }
 }
 
 dependencies {
