@@ -5,6 +5,10 @@ A collection of fixes for FastScroller and RecyclerView, based on:
 - https://androidx.de/androidx/car/widget/itemdecorators/BottomOffsetDecoration.html
 - https://androidx.de/androidx/car/util/GridLayoutManagerUtils.html
 
+what to put in gradle file (use latet release version there) :
+
+https://jitpack.io/#AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes
+
 What it fixes:
 
 1. When there are many items in RecyclerView, and you use a fast-scroller, the thumb (what you drag) can become extremely small, making it hard to touch.
