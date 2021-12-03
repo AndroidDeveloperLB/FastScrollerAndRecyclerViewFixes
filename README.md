@@ -5,7 +5,7 @@ A collection of fixes for FastScroller and RecyclerView, based on:
 - https://androidx.de/androidx/car/widget/itemdecorators/BottomOffsetDecoration.html
 - https://androidx.de/androidx/car/util/GridLayoutManagerUtils.html
 
-what to put in gradle file (use latet release version there) :
+what to put in gradle file (use latest release version there) :
 
 https://jitpack.io/#AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes
 
