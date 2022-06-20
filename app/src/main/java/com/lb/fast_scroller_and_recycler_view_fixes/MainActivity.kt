@@ -6,9 +6,7 @@ import android.graphics.drawable.StateListDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.*
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -18,7 +16,6 @@ import com.lb.fast_scroller_and_recycler_view_fixes.databinding.ActivityMainBind
 import com.lb.fast_scroller_and_recycler_view_fixes.databinding.SimpleListItem1Binding
 import com.lb.fast_scroller_and_recycler_view_fixes_library.BottomOffsetDecoration
 import com.lb.fast_scroller_and_recycler_view_fixes_library.FastScrollerEx
-import com.lb.fast_scroller_and_recycler_view_fixes_library.GridLayoutManagerEx
 import dev.chrisbanes.insetter.applySystemWindowInsetsToMargin
 import dev.chrisbanes.insetter.applySystemWindowInsetsToPadding
 
