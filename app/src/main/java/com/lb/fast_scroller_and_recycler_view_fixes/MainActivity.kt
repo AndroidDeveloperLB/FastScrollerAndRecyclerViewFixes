@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-                val itemBinding=SimpleListItem1Binding.inflate( LayoutInflater.from(this@MainActivity),parent,false)
+                val itemBinding = SimpleListItem1Binding.inflate(LayoutInflater.from(this@MainActivity), parent, false)
                 return object : RecyclerView.ViewHolder(itemBinding.itemTextView) {
                 }
             }
 
             override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-                val itemBinding=SimpleListItem1Binding.bind(holder.itemView)
+                val itemBinding = SimpleListItem1Binding.bind(holder.itemView)
                 itemBinding.itemTextView.text = position.toString()
                 itemBinding.itemTextView.setBackgroundColor(if (position % 2 == 0) 0xffff0000.toInt() else 0xff00ff00.toInt())
             }
@@ -70,8 +70,8 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             window.navigationBarColor = ContextCompat.getColor(this, android.R.color.transparent)
         binding.appBarLayout.applySystemWindowInsetsToPadding(left = true, right = true, top = true)
-        binding.fab.applySystemWindowInsetsToMargin(left = true, right = true,  bottom = true)
-        binding.recyclerView.applySystemWindowInsetsToPadding(left = true, right = true,  bottom = true)
+        binding.fab.applySystemWindowInsetsToMargin(left = true, right = true, bottom = true)
+        binding.recyclerView.applySystemWindowInsetsToPadding(left = true, right = true, bottom = true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.menuItem_all_my_apps -> url =
                     "https://play.google.com/store/apps/developer?id=AndroidDeveloperLB"
+
             R.id.menuItem_all_my_repositories -> url = "https://github.com/AndroidDeveloperLB"
             R.id.menuItem_current_repository_website -> url =
                     "https://github.com/AndroidDeveloperLB/FastScrollerAndRecyclerViewFixes"

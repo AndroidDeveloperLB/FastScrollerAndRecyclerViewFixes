@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.lb.fast_scroller_and_recycler_view_fixes"
-        minSdkVersion 16
-        targetSdkVersion 32
+        minSdkVersion 19
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -31,7 +31,9 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig = false
     }
+    namespace 'com.lb.fast_scroller_and_recycler_view_fixes'
 }
 
 dependencies {
