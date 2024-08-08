@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-//    id 'maven-publish'
+    id 'maven-publish'
 }
 
 android {
@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         minSdk 19
-        targetSdk 35
+        targetSdk 34
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -20,18 +20,26 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
     buildFeatures {
         buildConfig = false
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     namespace 'com.lb.fast_scroller_and_recycler_view_fixes_library'
 }
-
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
 dependencies {
     api 'androidx.core:core-ktx:1.13.1'
     api 'com.google.android.material:material:1.12.0'
