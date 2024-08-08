@@ -33,6 +33,9 @@ android {
 }
 afterEvaluate {
     publishing {
+//        singleVariant('release') {
+//            withSourcesJar()
+//        }
         publications {
             maven(MavenPublication) {
                 from components.release
