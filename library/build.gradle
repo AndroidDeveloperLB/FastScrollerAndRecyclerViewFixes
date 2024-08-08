@@ -34,10 +34,15 @@ android {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
+            maven(MavenPublication) {
                 from components.release
             }
         }
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//            }
+//        }
     }
 }
 dependencies {
